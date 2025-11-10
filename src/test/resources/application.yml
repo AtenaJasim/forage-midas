@@ -1,0 +1,19 @@
+server:
+  port: 33400
+
+general:
+  kafka-topic: test-topic
+
+spring:
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    listener:
+      missing-topics-fatal: false
+    consumer:
+      auto-offset-reset: earliest
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+incentive:
+  base-url: http://localhost:8080
